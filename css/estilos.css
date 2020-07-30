@@ -1,175 +1,151 @@
-/*Global*/
-html {
-  position: relative;
+/*Esto es para todos los elementos del html 
+* {
 }
+*/
 body {
   margin: 0;
-  font-family: arial, sans-serif;
+  padding: 0;
   font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 a {
   text-decoration: none;
-  color: #434343;
+  cursor: pointer;
 }
-a:hover {
-  text-decoration: underline;
+/*Header*/
+header {
+  width: 100%;
+  height: 60px;
 }
-li {
-  list-style: none;
-}
-/*header*/
-.navegation{
+header nav {
   display: flex;
   justify-content: flex-end;
-  padding: 2px 9px;
 }
-.navegation ul {
-  display: flex;
-  align-items: center;
-}
-.navegation ul li {
-  margin-right: 21px;
-}
-.enlace-menu {
-  height: 18px;
-  width: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.enlace-menu .frame-menu{
-  flex:0 0 20%;
-  background-color: #272727;
-  margin: 1px;
-}
-.enlace-logo-email {
-  color: white;
-  background-color: #78909C;
-  border: transparent;
-  height: 32px;
-  width: 32px;
+header nav .nav-right-section {
+  width: 250px;
+  height: auto;
   display: flex;
   justify-content: center;
+  list-style: none;
   align-items: center;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  font-size: 15px;
 }
-/*Content*/
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: auto;
-}
-.container-image {
-  height: 233px;
-}
-.logo-principal {
-  padding-top: 109px;
-}
-/*input*/
-.container-input {
-  display: block;
-  width: 482px;
-  height: 45px;
-}
-.container-input .input {
-  display: inline-block;
-  width: inherit;
-  height: inherit;
-  border: 1px solid #E9EBEE;
-  border-radius: 30px;
-  background-image: url('../images/lupa.png');/*Poner lupa*/
-  background-size: 12px;/*Todo esto de la lupa*/
-  background-repeat: no-repeat;
-  background-position-x: 15px;
-  background-position-y: center;
-  position: absolute;
-  text-align: 20%;
-}
-.container-input .input .search {
-  height: inherit;
-  border: none;
-  background: transparent;
-  display: block;
-  width: 84%;
-  margin: 0 auto;
-  outline: none;/*Quitar el border que sale cuando damos click a un input*/
-}
-.container-input .input:hover {
-  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
-}
-.container-input img {/*Poner el micro sobre el input*/
-  position: relative;
-  width: 14px;
-  left: 440px;
-  top: 13px;
-  padding: 0 8px;
-}
-/*buttons*/
-.container-buttons {
-  padding-top: 30px;
-}
-.container-buttons button {
-  padding: 10px 18px;
-  border-radius: 5px;
+nav .nav-right-section a {
   margin-right: 10px;
-  color: #5F6368;
+  color: #000;
+}
+nav .nav-right-section .menu-icon {
+  background-image: url('https://static.thenounproject.com/png/756729-200.png');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+nav .nav-right-section img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
+/*Main*/
+main {
+  margin-top: 150px;
+  text-align: center;
+}
+.main-logo {
+  width: 530px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+.main-logo img {
+  width: 300px;
+}
+main .main-input {
+  width: 530px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+/**Seccion de input**/
+main .main-input-container {
+  width: 525px;
+  border-radius : 100px;
+  border: 1px solid #dfe1e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .main-input-container:hover {
+  box-shadow: 0 1px 6px #20212447;
+  border-color: #dfe1e500;
+}
+main .main-input-container input {
+  width: 450px;
+  height: 40px;
+  border: none;
+  outline: none;
+}
+main .main-input .search-icon {
+  background-image: url('https://img.icons8.com/android/24/000000/search.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+}
+main .main-input a {
+  background-image: url('https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+}
+main .main-buttons {
+  width: 530px;
+  margin: 0 auto;
+}
+main .main-buttons div {
+  display: inline-block;
+}
+main .main-buttons button {
+  height: 36px;
+  background-color: #f2f2f2;
+  border: 0;
   font-size: 14px;
-  border: transparent;
+  color: #5f6368;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-right: 15px;
 }
-button:hover {
-  cursor: pointer;
+main .main-buttons button:hover {
   border: 1px solid #c6c6c6;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-}
-/*Idioma*/
-.container-language {
-  margin: 10px 0;
-}
-.container-language p a {
-  color: #1a0dab;
-}
-.container-language p a:hover {
-  text-decoration-line: underline;
+  box-shadow: 0 1px 1px #000001;
+  color: #000001;
 }
 /*Footer*/
-.footer {
-  background-color: #f2f2f2;
-  position: fixed;/*Para que se pegue abajo el footer*/
+footer {
   width: 100%;
-  bottom: 0;/*Para que se pegue al pie de página el footer*/
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  font-size: 13px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
 }
-.footer .floor {
-  border: 1px solid #e4e4e4;
-  padding: 0 0 0 30px;
-  font-size: 15px;
-  color: rgba(0,0,0,.54);
-  margin: 0;
-}
-.footer .first-floor-footer p {
-  margin: 0 auto;
-  line-height: 40px;
-}
-.footer .second-floor-footer {
+footer ul {
+  margin: 10px;
+  list-style: none;
   display: flex;
-  justify-content: space-between;
-  padding-right: 35px;
-  font-size: 14px;
+  padding-left: 0;
 }
-.footer .second-floor-footer ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  line-height: 40px;
+footer .footer-left {
+  justify-self: left;
 }
-.footer .second-floor-footer ul li a{
-  color: rgba(0,0,0,.54);
-  margin-right: 25px;
+footer .footer-right {
+  justify-self: right;
 }
-.footer .second-floor-footer ul li .last-type {
-  margin-right: 0;
+footer ul li a {
+  margin: 10px;
+  color: #5f6268
 }
